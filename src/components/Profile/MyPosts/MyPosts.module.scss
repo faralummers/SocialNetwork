@@ -1,0 +1,39 @@
+.MyPosts {
+  .newPostInput form {
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 16px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 56px;
+      grid-column-gap: 16px;
+
+      textarea {
+        border: 1px solid #bebfc2;
+        border-radius: 4px;
+        height: 30px;
+
+        &:focus::-webkit-input-placeholder {color: transparent}
+        :focus::-moz-placeholder          {color: transparent}
+        :focus:-moz-placeholder           {color: transparent}
+        :focus:-ms-input-placeholder      {color: transparent}
+      }
+
+      button {
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid #6991ad;
+        background: inherit;
+        transition: all .3s ease;
+
+        &:hover {
+          background-color: #6991ad;
+          color: #fff;
+        }
+      }
+  }
+
+  .posts {
+      margin-top: 20px;
+  }
+}

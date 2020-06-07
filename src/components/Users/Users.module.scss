@@ -1,0 +1,149 @@
+.users {
+  .usersContainer {
+    padding: 26px;
+    display: grid;
+    grid-row-gap: 16px;
+  
+    .userItem {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      animation-name: example;
+      animation-duration: .3s;
+
+      .userAva {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-right: 10px;
+        a {
+          display: flex;
+          justify-content: center;
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
+        }
+        button {
+          margin-top: 7px;
+          width: 80%;
+          justify-self: center;
+          cursor: pointer;
+          border-radius: 4px;
+          background-color: #6991ad;
+          border: none;
+          color: #fff;
+          transition: all .3s ease;
+
+          &:hover {
+            background-color: #4a76a8;
+          }
+        }
+      }
+
+      .userInfo {
+        background-color: #fff;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: 
+        "name country"
+        "status city";
+        
+        h3 {
+          grid-area: name;
+          margin-left: 36px;
+        }
+        .status {
+          grid-area: status;
+          margin-left: 36px;
+        }
+        .country {
+          text-align: center;
+          grid-area: country;
+        }
+        .city {
+          text-align: center;
+          grid-area: city;
+        }
+      }
+    }
+  }
+
+  .pageNav {
+
+    .btnPage {
+      background-color: #fff;
+      cursor: pointer;
+      border: none;
+      transition: all .3s ease-in-out;
+      border-radius: 4px;
+
+      &:not(:last-child) {
+        margin: 2px;
+      }
+
+      &:hover {
+        background-color: #4a76a8;
+        transform: scale(1.4)
+      }
+    }
+
+    .selectedPage {
+      background-color: #4a76a8;
+      cursor: pointer;
+      border: none;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .showMore {
+    padding: 7px 0;
+    font-size: 18px;
+    display: block;
+    width: 200px;
+    margin: 15px auto;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #6991ad;
+    border: none;
+    color: #fff;
+    transition: all .3s ease;
+
+    &:hover {
+      background-color: #4a76a8;
+    }
+  }
+}
+
+ @keyframes example {
+  0% {transform: scale(0);}
+  10% {transform: scale(0.1);}
+  20% {transform: scale(0.2);}
+  30% {transform: scale(0.3);}
+  40% {transform: scale(0.4);}
+  50% {transform: scale(0.5);}
+  60% {transform: scale(0.6);}
+  70% {transform: scale(0.7);}
+  80% {transform: scale(0.8);}
+  90% {transform: scale(0.9);}
+  100% {transform: scale(1);}
+ }
+
+ .spinner {
+  margin: 0 auto;
+  width: 15px;
+  height: 15px;
+  border: 1px solid;
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-top-color: #fff;
+  border-right-color: #6991ad;
+  border-bottom-color: #4a76a8;
+  animation: spin 500ms infinite linear;
+}
+
+@keyframes spin {
+  100%{
+      transform: rotate(360deg);
+  }
+}
